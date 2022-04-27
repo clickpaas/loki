@@ -644,6 +644,7 @@ func Test_DryRun(t *testing.T) {
 	f, err := ioutil.TempFile("/tmp", "Test_DryRun")
 	require.NoError(t, err)
 	defer os.Remove(f.Name())
+	// test
 
 	_, err = New(config.Config{}, true)
 	require.Error(t, err)
